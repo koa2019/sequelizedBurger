@@ -1,0 +1,29 @@
+{
+    "name": "sequelizedburger",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/koa2019/sequelizedBurger.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/koa2019/sequelizedBurger/issues"
+    },
+    "homepage": "https://github.com/koa2019/sequelizedBurger#readme",
+    "dependencies": {
+        "dotenv": "^8.1.0",
+        "express": "^4.17.1",
+        "mysql2": "^1.7.0",
+        "nodemon": "^1.19.2",
+        "sequelize": "^5.19.1"
+    },
+    "devDependencies": {
+        "sequelize-cli": "^5.5.1"
+    }
+}
