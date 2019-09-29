@@ -1,0 +1,48 @@
+{{!-- content will be rendered to {{{body}}} in main.handlebars file--}}
+
+<div class="container ">
+  <h1 class="jumbotron text-center">Eat-da-Burgers!</h1>
+
+  <div class="row">
+    <div class="col-6 mx-auto">
+
+      <h3 style="text-center">Burgers</h3>
+
+      {{!-- loop through burger model & render each burger to page --}}
+      {{#each burgers}}
+      {{#unless this.devoured}}
+      <div>
+        <pre id="{{this.id}}"
+          value="{{this.devoured}}">{{this.burgerName}} <button data-id="{{this.id}}" class="change-devoured" newdevoured="false">Devour It!</button></pre>
+      </div>
+      {{/unless}}
+      {{/each}}
+    </div>
+
+    <div class="col-6 mx-auto">
+      <h3 style="text-center">Devoured Burgers</h3>
+      {{!-- adds a burger when it's devoured boolean value is true or equal to 1 --}}
+      <ul>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <pre id="{{this.id}}" value="{{this.devoured}}">{{this.burgerName}}</pre>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="col-12 mx-auto">
+
+        <form id="insertOne" class="create-form">
+          <textarea type="text" name="burgerName" id="burger" value="10"></textarea>
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+
+        <h5>Enter a burger you want to eat</h5>
+
+      </div>
+    </div>
+
+  </div>
